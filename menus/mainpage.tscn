@@ -97,15 +97,16 @@ metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Screen"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_bottom = 122.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Header" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
-size_flags_vertical = 2
+size_flags_vertical = 0
 alignment = 1
 
 [node name="Button" type="Button" parent="Screen/VBoxContainer/Header"]
@@ -132,7 +133,7 @@ stretch_mode = 3
 [node name="Searchbar" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
-size_flags_vertical = 2
+size_flags_vertical = 0
 alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="Screen/VBoxContainer/Searchbar"]
@@ -148,7 +149,7 @@ placeholder_text = "Search events, partys"
 [node name="Specific" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
-size_flags_vertical = 2
+size_flags_vertical = 0
 theme_override_constants/separation = 12
 alignment = 1
 
@@ -242,7 +243,7 @@ label_settings = SubResource("LabelSettings_de4v6")
 [node name="TrendingBar" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
-size_flags_vertical = 2
+size_flags_vertical = 0
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/TrendingBar"]
@@ -286,7 +287,7 @@ stretch_mode = 5
 [node name="UpcomingBar" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
-size_flags_vertical = 2
+size_flags_vertical = 0
 alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/UpcomingBar"]
@@ -319,3 +320,20 @@ size_flags_horizontal = 8
 text = "See more"
 label_settings = SubResource("LabelSettings_f2g4e")
 vertical_alignment = 1
+
+[node name="Searchbar2" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Screen/VBoxContainer/Searchbar2"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.435294, 0.435294, 0.435294, 1)
+theme_override_fonts/font = ExtResource("3_gl1sp")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkwqf")
+placeholder_text = "Search events, partys"

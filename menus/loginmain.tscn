@@ -89,6 +89,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="VSeparator2" type="VSeparator" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 17)
 layout_mode = 2
 
@@ -99,6 +100,7 @@ label_settings = SubResource("LabelSettings_g65ix")
 horizontal_alignment = 1
 
 [node name="VSeparator" type="VSeparator" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 17)
 layout_mode = 2
 
@@ -128,6 +130,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_bldil")
 placeholder_text = "Enter Password"
 
 [node name="VSeparator3" type="VSeparator" parent="Screen/VBoxContainer/PassEmail"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 
@@ -170,6 +173,7 @@ text = "Continue with Apple"
 icon = ExtResource("4_2gxsb")
 
 [node name="VSeparator4" type="VSeparator" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 
