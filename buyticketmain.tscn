@@ -1,0 +1,321 @@
+[gd_scene load_steps=14 format=3 uid="uid://yevpqkmcm45u"]
+
+[ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_b8k72"]
+[ext_resource type="Texture2D" uid="uid://4wkjbje1v31t" path="res://assets/bell.svg" id="2_1wb87"]
+[ext_resource type="FontFile" uid="uid://bsbo5slylgupq" path="res://assets/fonts/SF-Pro-Text-Medium.otf" id="3_prd5i"]
+[ext_resource type="Texture2D" uid="uid://db7gcq6kwe06b" path="res://assets/fire.svg" id="4_6rff2"]
+[ext_resource type="Texture2D" uid="uid://bht8ekw8dm3hh" path="res://assets/newjeans.png" id="5_ni317"]
+[ext_resource type="Texture2D" uid="uid://dht3127fj5cv4" path="res://assets/Calendar.svg" id="6_7fxiu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo43a"]
+bg_color = Color(0.113725, 0.105882, 0.121569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.243137, 0.243137, 0.243137, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkwqf"]
+content_margin_left = 16.0
+content_margin_top = 32.0
+content_margin_right = 20.0
+content_margin_bottom = 0.0
+bg_color = Color(0.113725, 0.105882, 0.121569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.243137, 0.243137, 0.243137, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w54x0"]
+bg_color = Color(0.396078, 0.352941, 0.839216, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_de4v6"]
+font = ExtResource("3_prd5i")
+font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lrmkk"]
+bg_color = Color(0.113725, 0.105882, 0.121569, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_eaxir"]
+font = ExtResource("3_prd5i")
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_f2g4e"]
+font = ExtResource("3_prd5i")
+font_size = 18
+font_color = Color(0.545098, 0.545098, 0.545098, 1)
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_vertical_guides_ = [-68.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0941176, 0.0901961, 0.0941176, 1)
+
+[node name="Screen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -193.0
+offset_top = -441.0
+offset_right = 193.0
+offset_bottom = 441.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 122.0
+grow_horizontal = 2
+
+[node name="Header" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Screen/VBoxContainer/Header"]
+custom_minimum_size = Vector2(54, 54)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_jo43a")
+icon = ExtResource("1_b8k72")
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Screen/VBoxContainer/Header"]
+custom_minimum_size = Vector2(152, 54)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_jo43a")
+text = "Sean Rui"
+icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/Header"]
+layout_mode = 2
+texture = ExtResource("2_1wb87")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="Searchbar" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Screen/VBoxContainer/Searchbar"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.435294, 0.435294, 0.435294, 1)
+theme_override_fonts/font = ExtResource("3_prd5i")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_pkwqf")
+placeholder_text = "Search events, partys"
+
+[node name="Specific" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Button" type="Button" parent="Screen/VBoxContainer/Specific"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_w54x0")
+
+[node name="Hbox" type="HBoxContainer" parent="Screen/VBoxContainer/Specific/Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -27.0
+offset_right = 13.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/Specific/Button/Hbox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/Specific/Button/Hbox"]
+layout_mode = 2
+text = "All"
+label_settings = SubResource("LabelSettings_de4v6")
+
+[node name="Button2" type="Button" parent="Screen/VBoxContainer/Specific"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lrmkk")
+
+[node name="Hbox" type="HBoxContainer" parent="Screen/VBoxContainer/Specific/Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -27.0
+offset_right = 13.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/Specific/Button2/Hbox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/Specific/Button2/Hbox"]
+layout_mode = 2
+text = "🎵 Music"
+label_settings = SubResource("LabelSettings_de4v6")
+
+[node name="Button3" type="Button" parent="Screen/VBoxContainer/Specific"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_lrmkk")
+
+[node name="Hbox" type="HBoxContainer" parent="Screen/VBoxContainer/Specific/Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -27.0
+offset_right = 13.5
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/Specific/Button3/Hbox"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/Specific/Button3/Hbox"]
+layout_mode = 2
+text = "🤡 Comedy"
+label_settings = SubResource("LabelSettings_de4v6")
+
+[node name="TrendingBar" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/TrendingBar"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_6rff2")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Trending"
+label_settings = SubResource("LabelSettings_eaxir")
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Screen/VBoxContainer/TrendingBar"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "See more"
+label_settings = SubResource("LabelSettings_f2g4e")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 223)
+layout_mode = 2
+texture = ExtResource("5_ni317")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="UpcomingBar" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/UpcomingBar"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_7fxiu")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Upcoming"
+label_settings = SubResource("LabelSettings_eaxir")
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Screen/VBoxContainer/UpcomingBar"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="Label2" type="Label" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "See more"
+label_settings = SubResource("LabelSettings_f2g4e")
+vertical_alignment = 1
