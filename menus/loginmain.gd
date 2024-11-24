@@ -1,13 +1,26 @@
 extends Control
 
-@onready var logo: TextureRect = $Screen/VBoxContainer/Logo
+@onready var logo: TextureRect = $Screen/VBoxContainer/logo
+@onready var startparticles: GPUParticles2D = $startparticles
 
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	animate_logo()
+
+func animate_logo() -> void:
+	var tween_logo = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_CUBIC)
+	
+	logo.modulate = Color.TRANSPARENT
+	tween_logo.tween_property(logo,"modulate",Color.WHITE,0.4).from(Color.TRANSPARENT).set_delay(1)
+	
+	startparticles.emitting = false
+	tween_logo.tween_callback(startparticles.restart)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_login_pressed() -> void:
+	get_tree().change_scene_to_file("res://menus/mainpage.tscn")

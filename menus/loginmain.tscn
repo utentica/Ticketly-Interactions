@@ -101,7 +101,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Logo" type="TextureRect" parent="Screen/VBoxContainer"]
+[node name="logo" type="TextureRect" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 167)
 layout_mode = 2
 size_flags_vertical = 4
@@ -207,9 +207,11 @@ text = "By continuing I agree with Privacy Policy and Terms & Conditions"
 label_settings = SubResource("LabelSettings_hh87s")
 horizontal_alignment = 1
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="startparticles" type="GPUParticles2D" parent="."]
 self_modulate = Color(0.941236, 0.665627, 1, 1)
 position = Vector2(209, 106)
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_hinsn")
 texture = ExtResource("7_8rvcf")
+
+[connection signal="pressed" from="Screen/VBoxContainer/LoginForgot/Login" to="." method="_on_login_pressed"]
