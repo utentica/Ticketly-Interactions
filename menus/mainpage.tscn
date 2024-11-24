@@ -1,11 +1,18 @@
-[gd_scene load_steps=14 format=3 uid="uid://bobtv4mf6dsu3"]
+[gd_scene load_steps=23 format=3 uid="uid://bobtv4mf6dsu3"]
 
 [ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_vb85v"]
 [ext_resource type="Texture2D" uid="uid://4wkjbje1v31t" path="res://assets/bell.svg" id="2_mxh54"]
 [ext_resource type="FontFile" uid="uid://bsbo5slylgupq" path="res://assets/fonts/SF-Pro-Text-Medium.otf" id="3_gl1sp"]
 [ext_resource type="Texture2D" uid="uid://db7gcq6kwe06b" path="res://assets/fire.svg" id="4_7rum5"]
-[ext_resource type="Texture2D" uid="uid://bht8ekw8dm3hh" path="res://assets/newjeans.png" id="5_6vadt"]
+[ext_resource type="Texture2D" uid="uid://cixpaphfnymvc" path="res://assets/newjeans1.png" id="5_qh3rj"]
 [ext_resource type="Texture2D" uid="uid://dht3127fj5cv4" path="res://assets/Calendar.svg" id="5_vkgnh"]
+[ext_resource type="Texture2D" uid="uid://csc1c0rt00dex" path="res://assets/destroy.png" id="7_h0v7l"]
+[ext_resource type="Texture2D" uid="uid://dfb1pbcnicm1q" path="res://assets/homesvg.svg" id="8_q2mk6"]
+[ext_resource type="FontFile" uid="uid://chf1wgluplpia" path="res://assets/fonts/SF-Pro-Text-Bold.otf" id="9_angy0"]
+[ext_resource type="Texture2D" uid="uid://ddr3pjn1liblt" path="res://assets/activitysvg.svg" id="10_0cp6n"]
+[ext_resource type="FontFile" uid="uid://bufmdep46vvpw" path="res://assets/fonts/SF-Pro-Text-Semibold.otf" id="11_34d5m"]
+[ext_resource type="Texture2D" uid="uid://c6gs1mdv246eh" path="res://assets/calendarsvg.svg" id="12_oa03s"]
+[ext_resource type="Texture2D" uid="uid://d1awdm3f2c3nl" path="res://assets/profile.svg" id="13_4coyq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jo43a"]
 bg_color = Color(0.113725, 0.105882, 0.121569, 1)
@@ -62,6 +69,15 @@ font = ExtResource("3_gl1sp")
 font_size = 18
 font_color = Color(0.545098, 0.545098, 0.545098, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_nnf0i"]
+font = ExtResource("9_angy0")
+font_size = 14
+font_color = Color(0.396078, 0.352941, 0.839216, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4wn7g"]
+font = ExtResource("11_34d5m")
+font_size = 14
+
 [node name="mainmenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -102,6 +118,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 13
 
 [node name="Header" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
@@ -280,7 +297,9 @@ vertical_alignment = 1
 [node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 223)
 layout_mode = 2
-texture = ExtResource("5_6vadt")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_qh3rj")
 expand_mode = 3
 stretch_mode = 5
 
@@ -321,19 +340,93 @@ text = "See more"
 label_settings = SubResource("LabelSettings_f2g4e")
 vertical_alignment = 1
 
-[node name="Searchbar2" type="HBoxContainer" parent="Screen/VBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 223)
+layout_mode = 2
+texture = ExtResource("7_h0v7l")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="LowerMenu" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 10
+theme_override_constants/separation = 40
 alignment = 1
 
-[node name="TextEdit" type="TextEdit" parent="Screen/VBoxContainer/Searchbar2"]
-custom_minimum_size = Vector2(0, 64)
+[node name="Home" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 8
-theme_override_colors/font_color = Color(0.435294, 0.435294, 0.435294, 1)
-theme_override_fonts/font = ExtResource("3_gl1sp")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("StyleBoxFlat_pkwqf")
-placeholder_text = "Search events, partys"
+size_flags_horizontal = 4
+theme_override_constants/separation = 3
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/LowerMenu/Home"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_q2mk6")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/LowerMenu/Home"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Home"
+label_settings = SubResource("LabelSettings_nnf0i")
+vertical_alignment = 1
+
+[node name="Activity" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 3
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/LowerMenu/Activity"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("10_0cp6n")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/LowerMenu/Activity"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Activity"
+label_settings = SubResource("LabelSettings_4wn7g")
+vertical_alignment = 1
+
+[node name="Calendar" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 3
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/LowerMenu/Calendar"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("12_oa03s")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/LowerMenu/Calendar"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Calendar
+"
+label_settings = SubResource("LabelSettings_4wn7g")
+vertical_alignment = 1
+
+[node name="Profile" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 3
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/LowerMenu/Profile"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("13_4coyq")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/LowerMenu/Profile"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Profile"
+label_settings = SubResource("LabelSettings_4wn7g")
+vertical_alignment = 1
