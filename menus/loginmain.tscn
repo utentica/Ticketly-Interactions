@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvnxkolvhqhgm"]
+[gd_scene load_steps=14 format=3 uid="uid://dvnxkolvhqhgm"]
 
 [ext_resource type="Texture2D" uid="uid://c24ik2e7jrpi5" path="res://assets/logo.png" id="1_1uyhl"]
+[ext_resource type="Script" path="res://menus/loginmain.gd" id="1_jmrii"]
 [ext_resource type="FontFile" uid="uid://bsbo5slylgupq" path="res://assets/fonts/SF-Pro-Text-Medium.otf" id="2_sfllm"]
 [ext_resource type="Texture2D" uid="uid://dcm3ix1ub2ng0" path="res://assets/Apple.svg" id="3_21mpa"]
 [ext_resource type="Texture2D" uid="uid://ctuj8ph1cxmod" path="res://assets/Google.png" id="4_2gxsb"]
 [ext_resource type="FontFile" uid="uid://dqosggnuvwv7t" path="res://assets/fonts/SF-Pro-Text-Light.otf" id="5_m7uvx"]
+[ext_resource type="Texture2D" uid="uid://db6manv22tyws" path="res://assets/ticketsvg.svg" id="7_8rvcf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g65ix"]
 font = ExtResource("2_sfllm")
@@ -41,6 +43,12 @@ font = ExtResource("5_m7uvx")
 font_size = 14
 font_color = Color(0.694118, 0.721569, 0.745098, 1)
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hinsn"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(17, 1, 1)
+gravity = Vector3(0, 98, 0)
+
 [node name="login" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -48,6 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jmrii")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -185,3 +194,9 @@ theme_override_font_sizes/font_size = 12
 text = "By continuing I agree with Privacy Policy and Terms & Conditions"
 label_settings = SubResource("LabelSettings_hh87s")
 horizontal_alignment = 1
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(208, 130)
+amount = 30
+process_material = SubResource("ParticleProcessMaterial_hinsn")
+texture = ExtResource("7_8rvcf")
