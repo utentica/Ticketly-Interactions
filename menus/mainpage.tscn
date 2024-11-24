@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://bobtv4mf6dsu3"]
+[gd_scene load_steps=29 format=3 uid="uid://bobtv4mf6dsu3"]
 
+[ext_resource type="Script" path="res://menus/mainpage.gd" id="1_eqjoj"]
 [ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_vb85v"]
 [ext_resource type="Texture2D" uid="uid://4wkjbje1v31t" path="res://assets/bell.svg" id="2_mxh54"]
 [ext_resource type="FontFile" uid="uid://bsbo5slylgupq" path="res://assets/fonts/SF-Pro-Text-Medium.otf" id="3_gl1sp"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dht3127fj5cv4" path="res://assets/Calendar.svg" id="5_vkgnh"]
 [ext_resource type="Texture2D" uid="uid://csc1c0rt00dex" path="res://assets/destroy.png" id="7_h0v7l"]
 [ext_resource type="Texture2D" uid="uid://dfb1pbcnicm1q" path="res://assets/homesvg.svg" id="8_q2mk6"]
+[ext_resource type="FontFile" uid="uid://chf1wgluplpia" path="res://assets/fonts/SF-Pro-Text-Bold.otf" id="9_wel4j"]
 [ext_resource type="Texture2D" uid="uid://c725aefc8ml7a" path="res://assets/searchsvg.svg" id="10_dhb3c"]
 [ext_resource type="FontFile" uid="uid://bufmdep46vvpw" path="res://assets/fonts/SF-Pro-Text-Semibold.otf" id="11_34d5m"]
 [ext_resource type="Texture2D" uid="uid://bb5vxw6cxv10n" path="res://assets/friendssvg.svg" id="12_hkxw0"]
@@ -70,12 +72,150 @@ font_size = 18
 font_color = Color(0.545098, 0.545098, 0.545098, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nnf0i"]
-font = ExtResource("3_gl1sp")
+font = ExtResource("9_wel4j")
 font_size = 14
+font_color = Color(0.396078, 0.352941, 0.839216, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wn7g"]
 font = ExtResource("11_34d5m")
 font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_nj8oo"]
+font = ExtResource("11_34d5m")
+font_size = 14
+
+[sub_resource type="Animation" id="Animation_hukfb"]
+resource_name = "new_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Home:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Search:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Friends:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Calendar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Profile:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bmbr2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Home:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Search:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Friends:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Calendar:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Profile:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0941176, 0.0901961, 0.0941176, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_awsey"]
+_data = {
+"RESET": SubResource("Animation_bmbr2"),
+"new_animation": SubResource("Animation_hukfb")
+}
 
 [node name="mainmenu" type="Control"]
 layout_mode = 3
@@ -84,6 +224,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_eqjoj")
 metadata/_edit_vertical_guides_ = [-68.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -354,6 +495,7 @@ theme_override_constants/separation = 35
 alignment = 1
 
 [node name="Home" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -373,6 +515,7 @@ label_settings = SubResource("LabelSettings_nnf0i")
 vertical_alignment = 1
 
 [node name="Search" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+modulate = Color(0.0941176, 0.0901961, 0.0941176, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -393,6 +536,7 @@ label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
 
 [node name="Friends" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+modulate = Color(0.0941176, 0.0901961, 0.0941176, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -413,6 +557,7 @@ label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
 
 [node name="Calendar" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+modulate = Color(0.0941176, 0.0901961, 0.0941176, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -433,6 +578,7 @@ label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
 
 [node name="Profile" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
+modulate = Color(0.0941176, 0.0901961, 0.0941176, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -448,5 +594,10 @@ texture = ExtResource("13_4coyq")
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Profile"
-label_settings = SubResource("LabelSettings_4wn7g")
+label_settings = SubResource("LabelSettings_nj8oo")
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Screen/VBoxContainer/LowerMenu"]
+libraries = {
+"": SubResource("AnimationLibrary_awsey")
+}
