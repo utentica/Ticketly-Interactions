@@ -1,9 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://yevpqkmcm45u"]
+[gd_scene load_steps=27 format=3 uid="uid://yevpqkmcm45u"]
 
 [ext_resource type="Texture2D" uid="uid://cevg56smh2l04" path="res://assets/map.png" id="2_uy8gn"]
 [ext_resource type="FontFile" uid="uid://bsbo5slylgupq" path="res://assets/fonts/SF-Pro-Text-Medium.otf" id="3_prd5i"]
 [ext_resource type="Texture2D" uid="uid://dah7v8y1wv5eo" path="res://assets/pullnaoseisvg.svg" id="3_u6yvm"]
-[ext_resource type="Texture2D" uid="uid://dfb1pbcnicm1q" path="res://assets/homesvg.svg" id="8_jmuj6"]
+[ext_resource type="Texture2D" uid="uid://p1sbxjyamans" path="res://assets/lonelyticket1.png" id="4_00jts"]
+[ext_resource type="Texture2D" uid="uid://b6n2qwao7cn10" path="res://assets/musicsvg.svg" id="6_g64sr"]
+[ext_resource type="FontFile" uid="uid://7fftu3mwjol1" path="res://assets/fonts/SF-Pro-Text-Regular.otf" id="7_qlm0n"]
+[ext_resource type="Texture2D" uid="uid://db6manv22tyws" path="res://assets/ticketsvg.svg" id="8_lu8mj"]
+[ext_resource type="Texture2D" uid="uid://brd8bqls0mxij" path="res://assets/homenormalsvg.svg" id="9_lqown"]
 [ext_resource type="FontFile" uid="uid://chf1wgluplpia" path="res://assets/fonts/SF-Pro-Text-Bold.otf" id="9_xaa7s"]
 [ext_resource type="Texture2D" uid="uid://c725aefc8ml7a" path="res://assets/searchsvg.svg" id="10_ebelm"]
 [ext_resource type="FontFile" uid="uid://bufmdep46vvpw" path="res://assets/fonts/SF-Pro-Text-Semibold.otf" id="11_pl5r1"]
@@ -45,7 +49,45 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
+[sub_resource type="LabelSettings" id="LabelSettings_smvld"]
+font = ExtResource("3_prd5i")
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_81clt"]
+font = ExtResource("11_pl5r1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ofae0"]
+font = ExtResource("7_qlm0n")
+font_size = 15
+font_color = Color(0.545098, 0.545098, 0.545098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e7oj"]
+content_margin_left = 22.0
+content_margin_top = 10.0
+content_margin_right = 22.0
+content_margin_bottom = 10.0
+bg_color = Color(0.164706, 0.156863, 0.176471, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwltp"]
+content_margin_left = 22.0
+content_margin_top = 10.0
+content_margin_right = 22.0
+content_margin_bottom = 10.0
+bg_color = Color(0.396078, 0.352941, 0.839216, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [sub_resource type="LabelSettings" id="LabelSettings_nnf0i"]
+font = ExtResource("3_prd5i")
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_um3fm"]
 font = ExtResource("9_xaa7s")
 font_size = 14
 font_color = Color(0.396078, 0.352941, 0.839216, 1)
@@ -214,6 +256,7 @@ label_settings = SubResource("LabelSettings_de4v6")
 [node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_uy8gn")
 expand_mode = 3
@@ -225,6 +268,172 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_u6yvm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 27
+
+[node name="Ticket1" type="VBoxContainer" parent="Screen/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="info" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket1"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info"]
+custom_minimum_size = Vector2(0, 79)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_00jts")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer"]
+layout_mode = 2
+text = "LOVE LASTS 2.5 - WED DEC 17"
+label_settings = SubResource("LabelSettings_smvld")
+
+[node name="Label2" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer"]
+layout_mode = 2
+text = "DESTROY LONELY"
+label_settings = SubResource("LabelSettings_81clt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="typeevent" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer/HBoxContainer/typeevent"]
+layout_mode = 2
+texture = ExtResource("6_g64sr")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer/HBoxContainer/typeevent"]
+layout_mode = 2
+text = "Indie Rock"
+label_settings = SubResource("LabelSettings_ofae0")
+
+[node name="priceevent" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer/HBoxContainer/priceevent"]
+layout_mode = 2
+texture = ExtResource("8_lu8mj")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/info/VBoxContainer/HBoxContainer/priceevent"]
+layout_mode = 2
+text = "€130 - €220"
+label_settings = SubResource("LabelSettings_ofae0")
+
+[node name="buttons" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket1"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/buttons"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_prd5i")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_7e7oj")
+text = "Add to Calendar"
+
+[node name="Button2" type="Button" parent="Screen/VBoxContainer/VBoxContainer/Ticket1/buttons"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_prd5i")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwltp")
+text = "Add to Calendar"
+
+[node name="Ticket2" type="VBoxContainer" parent="Screen/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="info" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info"]
+custom_minimum_size = Vector2(0, 79)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_00jts")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer"]
+layout_mode = 2
+text = "LOVE LASTS 2.5 - WED DEC 17"
+label_settings = SubResource("LabelSettings_smvld")
+
+[node name="Label2" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer"]
+layout_mode = 2
+text = "DESTROY LONELY"
+label_settings = SubResource("LabelSettings_81clt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="typeevent" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer/HBoxContainer/typeevent"]
+layout_mode = 2
+texture = ExtResource("6_g64sr")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer/HBoxContainer/typeevent"]
+layout_mode = 2
+text = "Indie Rock"
+label_settings = SubResource("LabelSettings_ofae0")
+
+[node name="priceevent" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer/HBoxContainer/priceevent"]
+layout_mode = 2
+texture = ExtResource("8_lu8mj")
+
+[node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer/HBoxContainer/priceevent"]
+layout_mode = 2
+text = "€130 - €220"
+label_settings = SubResource("LabelSettings_ofae0")
+
+[node name="buttons" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/buttons"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_prd5i")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_7e7oj")
+text = "Add to Calendar"
+
+[node name="Button2" type="Button" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/buttons"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_prd5i")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwltp")
+text = "Add to Calendar"
 
 [node name="LowerMenu" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
@@ -243,7 +452,7 @@ custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("8_jmuj6")
+texture = ExtResource("9_lqown")
 
 [node name="Label" type="Label" parent="Screen/VBoxContainer/LowerMenu/Home"]
 layout_mode = 2
@@ -258,6 +467,7 @@ size_flags_horizontal = 4
 theme_override_constants/separation = 3
 
 [node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/LowerMenu/Search"]
+self_modulate = Color(0.396078, 0.352941, 0.839216, 1)
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -269,7 +479,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Search
 "
-label_settings = SubResource("LabelSettings_4wn7g")
+label_settings = SubResource("LabelSettings_um3fm")
 vertical_alignment = 1
 
 [node name="Friends" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bobtv4mf6dsu3"]
+[gd_scene load_steps=23 format=3 uid="uid://bobtv4mf6dsu3"]
 
 [ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_vb85v"]
 [ext_resource type="Texture2D" uid="uid://4wkjbje1v31t" path="res://assets/bell.svg" id="2_mxh54"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dht3127fj5cv4" path="res://assets/Calendar.svg" id="5_vkgnh"]
 [ext_resource type="Texture2D" uid="uid://csc1c0rt00dex" path="res://assets/destroy.png" id="7_h0v7l"]
 [ext_resource type="Texture2D" uid="uid://dfb1pbcnicm1q" path="res://assets/homesvg.svg" id="8_q2mk6"]
-[ext_resource type="FontFile" uid="uid://chf1wgluplpia" path="res://assets/fonts/SF-Pro-Text-Bold.otf" id="9_angy0"]
 [ext_resource type="Texture2D" uid="uid://c725aefc8ml7a" path="res://assets/searchsvg.svg" id="10_dhb3c"]
 [ext_resource type="FontFile" uid="uid://bufmdep46vvpw" path="res://assets/fonts/SF-Pro-Text-Semibold.otf" id="11_34d5m"]
 [ext_resource type="Texture2D" uid="uid://bb5vxw6cxv10n" path="res://assets/friendssvg.svg" id="12_hkxw0"]
@@ -71,9 +70,8 @@ font_size = 18
 font_color = Color(0.545098, 0.545098, 0.545098, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nnf0i"]
-font = ExtResource("9_angy0")
+font = ExtResource("3_gl1sp")
 font_size = 14
-font_color = Color(0.396078, 0.352941, 0.839216, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wn7g"]
 font = ExtResource("11_34d5m")
