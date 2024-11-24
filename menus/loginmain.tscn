@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dvnxkolvhqhgm"]
+[gd_scene load_steps=16 format=3 uid="uid://dvnxkolvhqhgm"]
 
 [ext_resource type="Texture2D" uid="uid://c24ik2e7jrpi5" path="res://assets/logo.png" id="1_1uyhl"]
 [ext_resource type="Script" path="res://menus/loginmain.gd" id="1_jmrii"]
@@ -43,13 +43,23 @@ font = ExtResource("5_m7uvx")
 font_size = 14
 font_color = Color(0.694118, 0.721569, 0.745098, 1)
 
+[sub_resource type="Curve" id="Curve_l8ko0"]
+min_value = -200.0
+max_value = 200.0
+_data = [Vector2(0.0133333, -200), 0.0, 0.0, 0, 0, Vector2(0.573333, 200), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_swr6y"]
+curve = SubResource("Curve_l8ko0")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hinsn"]
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(100, 80, 100)
 angular_velocity_min = -1.60933e-05
 angular_velocity_max = 160.0
-gravity = Vector3(0, 98, 0)
+gravity = Vector3(0, 80, 0)
+linear_accel_curve = SubResource("CurveTexture_swr6y")
 
 [node name="login" type="Control"]
 layout_mode = 3
@@ -198,7 +208,7 @@ label_settings = SubResource("LabelSettings_hh87s")
 horizontal_alignment = 1
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(208, 130)
+position = Vector2(209, 106)
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_hinsn")
 texture = ExtResource("7_8rvcf")
