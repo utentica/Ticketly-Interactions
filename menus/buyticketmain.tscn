@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://yevpqkmcm45u"]
+[gd_scene load_steps=34 format=3 uid="uid://yevpqkmcm45u"]
 
 [ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_xtvxk"]
 [ext_resource type="Texture2D" uid="uid://4wkjbje1v31t" path="res://assets/bell.svg" id="2_rj2yg"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://brd8bqls0mxij" path="res://assets/homenormalsvg.svg" id="9_lqown"]
 [ext_resource type="FontFile" uid="uid://chf1wgluplpia" path="res://assets/fonts/SF-Pro-Text-Bold.otf" id="9_xaa7s"]
 [ext_resource type="Texture2D" uid="uid://c725aefc8ml7a" path="res://assets/searchsvg.svg" id="10_ebelm"]
+[ext_resource type="Texture2D" uid="uid://bep7ljwgepukx" path="res://assets/newjeans2.png" id="11_c0iow"]
 [ext_resource type="FontFile" uid="uid://bufmdep46vvpw" path="res://assets/fonts/SF-Pro-Text-Semibold.otf" id="11_pl5r1"]
 [ext_resource type="Texture2D" uid="uid://bb5vxw6cxv10n" path="res://assets/friendssvg.svg" id="12_03uam"]
 [ext_resource type="Texture2D" uid="uid://c6gs1mdv246eh" path="res://assets/calendarsvg.svg" id="13_a270h"]
@@ -110,6 +111,187 @@ font_color = Color(0.396078, 0.352941, 0.839216, 1)
 font = ExtResource("11_pl5r1")
 font_size = 14
 
+[sub_resource type="Animation" id="Animation_ebnby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen/VBoxContainer/Header:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Screen/VBoxContainer/Searchbar/TextEdit:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Screen/VBoxContainer/Specific:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Screen/VBoxContainer/TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Screen/VBoxContainer/VBoxContainer/Ticket1:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Screen/VBoxContainer/VBoxContainer/Ticket2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Screen/VBoxContainer/TextureRect2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bnng2"]
+resource_name = "new_animation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen/VBoxContainer/Header:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Screen/VBoxContainer/Searchbar/TextEdit:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Screen/VBoxContainer/Specific:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Screen/VBoxContainer/TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Screen/VBoxContainer/VBoxContainer/Ticket1:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.6, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Screen/VBoxContainer/VBoxContainer/Ticket2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Screen/VBoxContainer/TextureRect2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.2, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e7gax"]
+_data = {
+"RESET": SubResource("Animation_ebnby"),
+"new_animation": SubResource("Animation_bnng2")
+}
+
 [node name="findtickets" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -159,6 +341,7 @@ grow_vertical = 2
 theme_override_constants/separation = 14
 
 [node name="Header" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 0
@@ -192,6 +375,7 @@ size_flags_vertical = 0
 alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="Screen/VBoxContainer/Searchbar"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -202,6 +386,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pkwqf")
 placeholder_text = "Search events, partys"
 
 [node name="Specific" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 0
@@ -296,6 +481,7 @@ text = "🤡 Comedy"
 label_settings = SubResource("LabelSettings_de4v6")
 
 [node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -305,6 +491,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(24, 11)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -316,6 +503,7 @@ layout_mode = 2
 theme_override_constants/separation = 27
 
 [node name="Ticket1" type="VBoxContainer" parent="Screen/VBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 16
 
@@ -397,6 +585,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_iwltp")
 text = "Add to Calendar"
 
 [node name="Ticket2" type="VBoxContainer" parent="Screen/VBoxContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 16
 
@@ -407,7 +596,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 79)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("4_00jts")
+texture = ExtResource("11_c0iow")
 expand_mode = 3
 stretch_mode = 5
 
@@ -417,12 +606,12 @@ theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer"]
 layout_mode = 2
-text = "LOVE LASTS 2.5 - WED DEC 17"
+text = "HOW SWEET - WED DEC 21"
 label_settings = SubResource("LabelSettings_smvld")
 
 [node name="Label2" type="Label" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer"]
 layout_mode = 2
-text = "DESTROY LONELY"
+text = "NEW JEANS"
 label_settings = SubResource("LabelSettings_81clt")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Screen/VBoxContainer/VBoxContainer/Ticket2/info/VBoxContainer"]
@@ -582,3 +771,9 @@ size_flags_horizontal = 4
 text = "Profile"
 label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_e7gax")
+}
+autoplay = "new_animation"

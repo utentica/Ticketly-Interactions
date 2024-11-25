@@ -63,7 +63,7 @@ corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
 [sub_resource type="Gradient" id="Gradient_6robl"]
-colors = PackedColorArray(1, 0.784314, 0, 1, 1, 0, 0, 0.176471)
+colors = PackedColorArray(0.396078, 0.352941, 0.839216, 1, 0.396078, 0.352941, 0.839216, 0.188235)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_grxmc"]
 gradient = SubResource("Gradient_6robl")
@@ -92,7 +92,7 @@ font_size = 18
 font_color = Color(0.545098, 0.545098, 0.545098, 1)
 
 [sub_resource type="Gradient" id="Gradient_xy34e"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.415686)
+colors = PackedColorArray(0.396078, 0.352941, 0.839216, 1, 0.396078, 0.352941, 0.839216, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_qy6rr"]
 gradient = SubResource("Gradient_xy34e")
@@ -125,66 +125,102 @@ font = ExtResource("11_34d5m")
 font_size = 14
 
 [sub_resource type="Animation" id="Animation_23vxv"]
-length = 0.001
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Screen/VBoxContainer/LowerMenu/Home:modulate")
+tracks/0/path = NodePath("Screen/VBoxContainer/Header:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Screen/VBoxContainer/LowerMenu/Search:modulate")
+tracks/1/path = NodePath("Screen/VBoxContainer/Searchbar/TextEdit:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.0941176, 0.0901961, 0.0941176, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Screen/VBoxContainer/LowerMenu/Friends:modulate")
+tracks/2/path = NodePath("Screen/VBoxContainer/Specific:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.8, 1.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.0941176, 0.0901961, 0.0941176, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Screen/VBoxContainer/LowerMenu/Calendar:modulate")
+tracks/3/path = NodePath("Screen/VBoxContainer/TrendingBar:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.2, 1.7),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.0941176, 0.0901961, 0.0941176, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Screen/VBoxContainer/LowerMenu/Profile:modulate")
+tracks/4/path = NodePath("Screen/VBoxContainer/TextureRect:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(1.6, 2.1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.0941176, 0.0901961, 0.0941176, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Screen/VBoxContainer/UpcomingBar:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Screen/VBoxContainer/TextureRect2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.4, 2.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Screen/VBoxContainer/LowerMenu:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.8, 3.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_x8vw2"]
@@ -301,6 +337,7 @@ grow_vertical = 2
 theme_override_constants/separation = 14
 
 [node name="Header" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 0
@@ -334,6 +371,7 @@ size_flags_vertical = 0
 alignment = 1
 
 [node name="TextEdit" type="TextEdit" parent="Screen/VBoxContainer/Searchbar"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -344,6 +382,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_pkwqf")
 placeholder_text = "Search events, partys"
 
 [node name="Specific" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 0
@@ -438,6 +477,7 @@ text = "🤡 Comedy"
 label_settings = SubResource("LabelSettings_de4v6")
 
 [node name="TrendingBar" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 0
@@ -481,6 +521,7 @@ label_settings = SubResource("LabelSettings_f2g4e")
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 223)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -490,6 +531,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="UpcomingBar" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 0
@@ -533,6 +575,7 @@ label_settings = SubResource("LabelSettings_f2g4e")
 vertical_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 223)
 layout_mode = 2
 texture = ExtResource("7_h0v7l")
@@ -540,6 +583,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="LowerMenu" type="HBoxContainer" parent="Screen/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 54)
 layout_mode = 2
 size_flags_vertical = 10
@@ -547,7 +591,6 @@ theme_override_constants/separation = 35
 alignment = 1
 
 [node name="Home" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -567,7 +610,6 @@ label_settings = SubResource("LabelSettings_nnf0i")
 vertical_alignment = 1
 
 [node name="Search" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
-modulate = Color(0.0941176, 0.0901961, 0.0941176, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -588,7 +630,6 @@ label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
 
 [node name="Friends" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
-modulate = Color(0.0941176, 0.0901961, 0.0941176, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -609,7 +650,6 @@ label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
 
 [node name="Calendar" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
-modulate = Color(0.0941176, 0.0901961, 0.0941176, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -630,7 +670,6 @@ label_settings = SubResource("LabelSettings_4wn7g")
 vertical_alignment = 1
 
 [node name="Profile" type="VBoxContainer" parent="Screen/VBoxContainer/LowerMenu"]
-modulate = Color(0.0941176, 0.0901961, 0.0941176, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 3
@@ -653,4 +692,6 @@ vertical_alignment = 1
 libraries = {
 "": SubResource("AnimationLibrary_kwrsd")
 }
-autoplay = "new_animation"
+autoplay = "RESET"
+
+[connection signal="pressed" from="Screen/VBoxContainer/Specific/Button2" to="." method="_on_button_2_pressed"]

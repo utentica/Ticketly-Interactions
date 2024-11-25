@@ -378,7 +378,7 @@ label_settings = SubResource("LabelSettings_hh87s")
 horizontal_alignment = 1
 
 [node name="startparticles" type="GPUParticles2D" parent="."]
-self_modulate = Color(0.941236, 0.665627, 1, 1)
+self_modulate = Color(0.396078, 0.352941, 0.839216, 1)
 position = Vector2(209, 106)
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_hinsn")
