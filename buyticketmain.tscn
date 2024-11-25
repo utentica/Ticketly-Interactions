@@ -1,5 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://yevpqkmcm45u"]
+[gd_scene load_steps=30 format=3 uid="uid://yevpqkmcm45u"]
 
+[ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_xtvxk"]
+[ext_resource type="Texture2D" uid="uid://4wkjbje1v31t" path="res://assets/bell.svg" id="2_rj2yg"]
 [ext_resource type="Texture2D" uid="uid://cevg56smh2l04" path="res://assets/map.png" id="2_uy8gn"]
 [ext_resource type="FontFile" uid="uid://bsbo5slylgupq" path="res://assets/fonts/SF-Pro-Text-Medium.otf" id="3_prd5i"]
 [ext_resource type="Texture2D" uid="uid://dah7v8y1wv5eo" path="res://assets/pullnaoseisvg.svg" id="3_u6yvm"]
@@ -14,6 +16,18 @@
 [ext_resource type="Texture2D" uid="uid://bb5vxw6cxv10n" path="res://assets/friendssvg.svg" id="12_03uam"]
 [ext_resource type="Texture2D" uid="uid://c6gs1mdv246eh" path="res://assets/calendarsvg.svg" id="13_a270h"]
 [ext_resource type="Texture2D" uid="uid://d1awdm3f2c3nl" path="res://assets/profile.svg" id="14_d3lvm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfk7d"]
+bg_color = Color(0.113725, 0.105882, 0.121569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.243137, 0.243137, 0.243137, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkwqf"]
 content_margin_left = 16.0
@@ -103,6 +117,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(558, 309)
 metadata/_edit_vertical_guides_ = [-68.0]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -142,6 +157,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 14
+
+[node name="Header" type="HBoxContainer" parent="Screen/VBoxContainer"]
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Button" type="Button" parent="Screen/VBoxContainer/Header"]
+custom_minimum_size = Vector2(54, 54)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfk7d")
+icon = ExtResource("1_xtvxk")
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Screen/VBoxContainer/Header"]
+custom_minimum_size = Vector2(152, 54)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_qfk7d")
+text = "Sean Rui"
+icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/Header"]
+layout_mode = 2
+texture = ExtResource("2_rj2yg")
+expand_mode = 3
+stretch_mode = 3
 
 [node name="Searchbar" type="HBoxContainer" parent="Screen/VBoxContainer"]
 custom_minimum_size = Vector2(0, 54)
