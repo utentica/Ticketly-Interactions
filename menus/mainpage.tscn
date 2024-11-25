@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bobtv4mf6dsu3"]
+[gd_scene load_steps=39 format=3 uid="uid://bobtv4mf6dsu3"]
 
 [ext_resource type="Script" path="res://menus/mainpage.gd" id="1_eqjoj"]
 [ext_resource type="Texture2D" uid="uid://c1jnyfye5bpoi" path="res://assets/hamb.svg" id="1_vb85v"]
@@ -62,6 +62,26 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
+[sub_resource type="Gradient" id="Gradient_6robl"]
+colors = PackedColorArray(1, 0.784314, 0, 1, 1, 0, 0, 0.176471)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_grxmc"]
+gradient = SubResource("Gradient_6robl")
+
+[sub_resource type="Curve" id="Curve_skkrs"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_eqjv2"]
+curve = SubResource("Curve_skkrs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_v0hxe"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_eqjv2")
+color_ramp = SubResource("GradientTexture1D_grxmc")
+
 [sub_resource type="LabelSettings" id="LabelSettings_eaxir"]
 font = ExtResource("3_gl1sp")
 font_size = 18
@@ -70,6 +90,26 @@ font_size = 18
 font = ExtResource("3_gl1sp")
 font_size = 18
 font_color = Color(0.545098, 0.545098, 0.545098, 1)
+
+[sub_resource type="Gradient" id="Gradient_xy34e"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.415686)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qy6rr"]
+gradient = SubResource("Gradient_xy34e")
+
+[sub_resource type="Curve" id="Curve_kcncs"]
+_data = [Vector2(0.00666666, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ahhp4"]
+curve = SubResource("Curve_kcncs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wrsox"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_ahhp4")
+color_ramp = SubResource("GradientTexture1D_qy6rr")
 
 [sub_resource type="LabelSettings" id="LabelSettings_nnf0i"]
 font = ExtResource("9_wel4j")
@@ -409,10 +449,16 @@ size_flags_horizontal = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 4
 
-[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer"]
+[node name="iconfogo" type="TextureRect" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture = ExtResource("4_7rum5")
+
+[node name="iconfogogpu" type="GPUParticles2D" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer/iconfogo"]
+position = Vector2(11, 13)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_v0hxe")
 texture = ExtResource("4_7rum5")
 
 [node name="Label" type="Label" parent="Screen/VBoxContainer/TrendingBar/HBoxContainer"]
@@ -455,10 +501,16 @@ size_flags_horizontal = 2
 size_flags_vertical = 4
 theme_override_constants/separation = 4
 
-[node name="TextureRect" type="TextureRect" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer"]
+[node name="iconcalendar" type="TextureRect" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture = ExtResource("5_vkgnh")
+
+[node name="iconcalendargpu" type="GPUParticles2D" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer/iconcalendar"]
+position = Vector2(10, 11)
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_wrsox")
 texture = ExtResource("5_vkgnh")
 
 [node name="Label" type="Label" parent="Screen/VBoxContainer/UpcomingBar/HBoxContainer"]
